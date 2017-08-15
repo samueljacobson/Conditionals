@@ -59,59 +59,105 @@ namespace Conditionals
 
             //}
             //}
-            Console.WriteLine("Enter a number from zero to ten as a word.");
+            //Console.WriteLine("Enter a number from zero to ten as a word.");
 
-            string digit = Console.ReadLine();
-            switch (digit)
+            //string digit = Console.ReadLine();
+            //switch (digit)
+            //{
+            //    case "zero":
+            //        Console.WriteLine("0");
+            //        break;
+
+            //    case "one":
+            //        Console.WriteLine("1");
+            //        break;
+
+            //    case "two":
+            //        Console.WriteLine("2");
+            //        break;
+
+            //    case "three":
+            //        Console.WriteLine("3");
+            //        break;
+
+            //    case "four":
+            //        Console.WriteLine("4");
+            //        break;
+
+            //    case "five":
+            //        Console.WriteLine("5");
+            //        break;
+
+            //    case "six":
+            //        Console.WriteLine("6");
+            //        break;
+
+            //    case "seven":
+            //        Console.WriteLine("7");
+            //        break;
+
+            //    case "eight":
+            //        Console.WriteLine("8");
+            //        break;
+
+            //    case "nine":
+            //        Console.WriteLine("9");
+            //        break;
+
+            //    case "ten":
+            //        Console.WriteLine("10");
+            //        break;
+
+            //    default:
+            //        Console.WriteLine("Error");
+            //        break;
+            //}
+
+            //Fizz Buzz Problem
+            Console.WriteLine("Please enter a number between 1 and 9.");
+            int num1 = int.Parse(Console.ReadLine());
+            
+            if (num1 >=1 && num1 <=9)
             {
-                case "zero":
-                    Console.WriteLine("0");
-                    break;
-
-                case "one":
-                    Console.WriteLine("1");
-                    break;
-
-                case "two":
-                    Console.WriteLine("2");
-                    break;
-
-                case "three":
-                    Console.WriteLine("3");
-                    break;
-
-                case "four":
-                    Console.WriteLine("4");
-                    break;
-
-                case "five":
-                    Console.WriteLine("5");
-                    break;
-
-                case "six":
-                    Console.WriteLine("6");
-                    break;
-
-                case "seven":
-                    Console.WriteLine("7");
-                    break;
-
-                case "eight":
-                    Console.WriteLine("8");
-                    break;
-
-                case "nine":
-                    Console.WriteLine("9");
-                    break;
-
-                case "ten":
-                    Console.WriteLine("10");
-                    break;
-
-                default:
-                    Console.WriteLine("Error");
-                    break;
+                Console.WriteLine("The number is valid.");
             }
+            else
+            {
+                Console.WriteLine("The number must be between 1 and 9.");
+            }
+
+            Console.WriteLine("Please enter a second number between 1 and 9.");
+                int num2 = int.Parse(Console.ReadLine());
+
+            if (num2 >=1 && num2 <=9)
+            {
+                Console.WriteLine("The number is valid.");
+            }
+            else
+            {
+                Console.WriteLine("The number must be between 1 and 9.");
+            }
+            
+            Console.WriteLine("Please enter a test number.");
+                int test = int.Parse(Console.ReadLine());
+
+            if (test % num1 == 0 && test % num2 != 0)
+            {
+                Console.WriteLine("Fizz!");
+            }
+            else if (test % num2 == 0 && test % num1 != 0)
+            {
+                Console.WriteLine("Buzz!");
+            }
+            else if (test % num1 == 0 && test % num2 == 0)
+            {
+                Console.WriteLine("FizzBuzz!");
+            }
+            else
+            {
+                Console.WriteLine(test);
+            }
+
         }
     }
 }
